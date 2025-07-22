@@ -63,20 +63,10 @@ export const login = async (req,res)=>{
         email: user.email,
       },
     });
-
-
-
-
-
   } catch (error) {
     console.log("error ijn logic controller",error)
-    res.status(500).json({message:"internal server error"})
-    
-  }
-    
-
-
-    
+    res.status(500).json({message:"internal server error"})  
+  }    
 }
 
 //logout
@@ -85,10 +75,7 @@ export const login = async (req,res)=>{
         return res.status(200).json({ message: "Logout successful. Please remove token from client." });
     } catch (error) {
       console.log("logout failed", error)
-    }
-
-
-    
+    }  
 }
 
 // update profile
